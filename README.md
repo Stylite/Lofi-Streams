@@ -8,7 +8,9 @@ Lofi-Streams is a Flask based lofi stream player.
 * Linux or Windows or macOS
 * Python 3.3 and up
 
-`$ pip install -r reqs.txt`
+```
+$ pip install -r reqs.txt
+```
 
 ## Usage
 
