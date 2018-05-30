@@ -1,0 +1,58 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="WilliamStylite, Stylite, github, discord, discord bot">
+    <meta name="og:title" content="Stylite">
+    <meta name="og:description" content"Dart, Python and, Java developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="static/modesta.css"> <!-- uses ModestaCSS from https://github.com/AlexFlipnote/ModestaCSS -->
+</head>
+<body>
+    <section class="fullscreen">
+            <div class="background" style="background-image: url('https://stylite.me/assets/background.jpg');"><div id="particles-js"></div></div>
+            <div class="center-object">
+            <section class="me">
+            <h1 class="title">Lofi streams</h1>
+            <span class="undertitle">Playing {{ songname }}</span>
+            </section>
+    <div class="buttons">
+        <a id="playbutton" onclick="window.location.href='#'" class="btn animation white black-text" target="_blank">Play</a>
+        <a id="pausebutton" onclick="window.location.href='#'" class="btn animation white black-text" target="_blank">Pause</a>
+        <a onclick="window.location.href='https://github.com/stylite/icycast'" class="btn animation white black-text" target="_blank">Source [Github]</a>
+        <a onclick="window.location.href='https://server.stylite.me'" class="btn animation white black-text" target="_blank">Discord</a>
+        <a onclick="window.location.href='http://ice1.somafm.com/groovesalad-128-mp3'" class="btn animation white black-text" target="_blank">Stream links</a>
+</div>
+
+<script src="particles.js"></script>
+    <script>
+      particlesJS('particles-js',{"particles":{"number":{"value":0,"density":{"enable":true,"value_area":800}},"color":{"value":"#ff0000"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":0,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ccc","opacity":1.0,"width":3},"move":{"enable":true,"speed":5,"direction":"none","random":false,"straight":false,"out_mode":"out","attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true,"config_demo":{"hide_card":false,"background_color":"#b61924","background_image":"","background_position":"50% 50%","background_repeat":"no-repeat","background_size":"cover"}});           
+    </script>
+
+<script type="text/javascript">
+
+    var images = ['static/assets/gifbg/1.gif', 'static/assets/gifbg/2.gif', 'static/assets/gifbg/3.gif', 'static/assets/gifbg/4.gif', 'static/assets/gifbg/5.gif', 'static/assets/gifbg/6.gif', 'static/assets/gifbg/7.gif', 'static/assets/gifbg/8.gif'];
+    document.getElementsByClassName('background')[0].style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
+  
+  </script>
+
+<audio autoplay id="aaudio">
+        <source src="http://ice1.somafm.com/groovesalad-128-mp3" type="audio/mp3">
+</audio>
+
+<script>
+    var audio = document.getElementById("aaudio");
+    audio.volume = 0.5;
+
+    playb = document.getElementById('playbutton');
+    pauseb = document.getElementById('pausebutton');
+
+playb.onclick = function () {
+    audio.play();
+};
+
+pauseb.onclick = function () {
+    audio.pause();
+};
+
+</script>
+
+</body>
